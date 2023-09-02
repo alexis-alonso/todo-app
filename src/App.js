@@ -1,4 +1,4 @@
-import Item from './component/Item'
+import Item from './component/item'
 
 export default function App() {
   return (
@@ -11,3 +11,4 @@ export default function App() {
     </div>
   );
 }
+
