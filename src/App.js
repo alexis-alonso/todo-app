@@ -7,6 +7,7 @@ export default function App() {
 
       <Item task='Wash dishes' />
       <Item task='Water plants' />
+      <Item task='Take out trash' />
 
     </div>
   );
