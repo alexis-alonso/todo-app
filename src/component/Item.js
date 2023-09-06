@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function Item({task}) {
+export default function Item( {task, numID} ) {
     const [checked, setChecked] = useState(false);
 
     function toggleChecked() {
@@ -10,6 +10,8 @@ export default function Item({task}) {
     return (
         <>
             <h1>
+                {numID}
+
                 To do: {task} 
 
                 <input 
