@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function Item( {task, numID} ) {
+export default function Task( {task} ) {
     const [checked, setChecked] = useState(false);
 
     function toggleChecked() {
@@ -10,7 +10,6 @@ export default function Item( {task, numID} ) {
     return (
         <>
             <h1>
-                {numID}
 
                 To do: {task} 
 

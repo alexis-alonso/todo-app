@@ -1,27 +1,29 @@
-import Item from './component/Item'
+import { useState } from 'react';
+import Task from './component/Task'
 import Form from './component/Form';
 
+
 export default function App() {
+  const [values, setValues] = useState([])
+
+  const handleSubmit = (value) => {
+    setValues([...values, value]);
+  };
+  
   return (
     <div className="App">
-      <Form />
 
       <h1>To-do App</h1>
 
-      <Item task='Wash dishes' />
-      <Item task='Water plants' />
-      <Item task='Take out trash' />
+      <Form clickSubmit={handleSubmit}/>
+
+      <div>
+        {values.map((value, index) => (
+          <Task key={index} task={value} />
+        ))}
+      </div>
+
 
     </div>
   );
 }
-
-// const listItems = [];
-
-// const list = (
-//   <ul>
-//     {listItems.map((item, index) => (
-//       <li key={index+1}>{index+1}</li>
-//     ))}
-//   </ul>
-// );
